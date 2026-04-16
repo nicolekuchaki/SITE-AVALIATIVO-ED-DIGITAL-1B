@@ -1,0 +1,112 @@
+/* --- CONFIGURAÇÕES GERAIS E VARIÁVEIS --- */
+:root {
+    --primary: #335f45;
+    --accent: #b27a2f;
+    --bg: #f8f3e7;
+    --text: #2d241c;
+    --surface: #ffffff;
+    --radius: 12px;
+    --gap: 20px;
+    --transition: all 0.3s ease;
+}
+
+/* --- MODO ALTO CONTRASTE --- */
+body.high-contrast {
+    --bg: #000000;
+    --text: #ffffff;
+    --primary: #ffff00;
+    --surface: #1a1a1a;
+    --accent: #00ffff;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    transition: var(--transition);
+}
+
+/* --- LAYOUT GRID/FLEX --- */
+header {
+    background: var(--primary);
+    color: white;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- COMPONENTES --- */
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    padding: 10px;
+}
+
+.carousel-item img {
+    width: 100%;
+    border-radius: var(--radius);
+}
+
+/* --- ACORDEÃO --- */
+.accordion-item {
+    background: var(--surface);
+    margin-bottom: 10px;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.accordion-header {
+    padding: 15px;
+    cursor: pointer;
+    background: var(--primary);
+    color: white;
+    font-weight: bold;
+}
+
+.accordion-content {
+    padding: 0;
+    max-height: 0;
+    transition: max-height 0.3s ease;
+}
+
+.accordion-item.active .accordion-content {
+    padding: 15px;
+    max-height: 200px;
+}
+
+/* --- ANIMAÇÕES --- */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.8s all ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
