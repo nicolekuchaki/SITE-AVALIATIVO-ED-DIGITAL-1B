@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do Campo ao Copo | Jornada do Malte</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar" aria-label="Navegação Principal">
+            <div class="logo">AgroMalte</div>
+            <ul class="nav-links" id="nav-menu">
+                <li><a href="#jornada">Jornada</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#sustentabilidade">Sustentabilidade</a></li>
+            </ul>
+            <div class="accessibility-controls">
+                <button onclick="changeFontSize(1)" aria-label="Aumentar fonte">A+</button>
+                <button onclick="changeFontSize(-1)" aria-label="Diminuir fonte">A-</button>
+                <button onclick="toggleContrast()" aria-label="Alternar Alto Contraste">◐</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero reveal">
+            <h1>Do campo ao copo: a excelência da cevada</h1>
+            <p>Conheça a tecnologia e a sustentabilidade por trás do malte de Guarapuava.</p>
+        </section>
+
+        <section id="galeria" class="reveal">
+            <h2>Nossa Galeria</h2>
+            <div class="carousel-container" role="region" aria-label="Galeria de imagens">
+                <div id="carousel-track" class="carousel-track">
+                    </div>
+                <button class="prev" aria-label="Anterior">❮</button>
+                <button class="next" aria-label="Próximo">❯</button>
+            </div>
+        </section>
+
+        <section id="sustentabilidade" class="reveal">
+            <h2>Pilares da Sustentabilidade</h2>
+            <div id="accordion-container">
+                </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Jornada do Malte - Programação Paraná</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
